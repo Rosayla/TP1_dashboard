@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.27/interact.min.js" type="module"></script>
+    
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-dark text-white p-4">
+        <div class="container">
+            <h1 class="mb-0">D3 Dashboard</h1>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 bg-light">
+                <div id="kpi-list" class="list-group mt-4">
+                    <a href="#" class="kpi-item list-group-item list-group-item-action" data-kpi="kpi1">KPI 1</a>
+                    <a href="#" class="kpi-item list-group-item list-group-item-action" data-kpi="kpi2">KPI 2</a>
+                    <a href="#" class="kpi-item list-group-item list-group-item-action" data-kpi="kpi3">KPI 3</a>
+                </div>
+                <div class="sidebar-footer">
+                    <button id="saveBtn" class="btn btn-primary btn-block">SAVE</button>
+                    <button id="refreshBtn" class="btn btn-success btn-block">REFRESH</button>
+                </div>
+            </nav>
+            <div class="col-md-9 col-lg-10 px-4 main-content">
+                <div class="graph-container">
+                    <svg id="chart" width="100%" height="200%"></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>
+</body>
+</html>
